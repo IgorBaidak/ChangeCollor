@@ -114,6 +114,9 @@ Background</string>
                                                         <color key="minimumTrackTintColor" red="0.84428411722183228" green="0.93998295068740845" blue="0.75719350576400757" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="maximumTrackTintColor" systemColor="systemGreenColor"/>
                                                         <color key="thumbTintColor" systemColor="systemGreenColor"/>
+                                                        <connections>
+                                                            <action selector="rgbSlider:" destination="ldy-g5-Ea7" eventType="valueChanged" id="oQr-Gs-zCx"/>
+                                                        </connections>
                                                     </slider>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Q1-0E-raT">
                                                         <rect key="frame" x="284" y="0.0" width="70" height="34"/>
