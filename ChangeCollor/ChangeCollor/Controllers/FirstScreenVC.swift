@@ -7,15 +7,20 @@
 
 import UIKit
 
+protocol CollorUpdateProtocol {
+    func onCollorUpdate(color: UIColor)
+}
+
 class FirstScreenVC: UIViewController {
 
+    @IBOutlet var superView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
-
+   
     /*
     // MARK: - Navigation
 

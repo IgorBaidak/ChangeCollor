@@ -40,9 +40,9 @@ class ChangeCollorVC: UIViewController {
     
     @IBAction func rgbSlider(_ sender: UISlider) {
         changeCollorLabel()
-        redTextField.text = String(redSlider.value)
-        greenTextField.text = String(greenSlider.value)
-        blueTextField.text = String(blueSlider.value)
+        redTextField.text = String(NSString(format: "%.0f", redSlider.value * 100))
+        greenTextField.text = String(NSString(format: "%.0f", greenSlider.value * 100))
+        blueTextField.text = String(NSString(format: "%.0f", blueSlider.value * 100))
     }
     
     @IBAction func redTF(_ sender: UITextField) {
@@ -72,6 +72,9 @@ class ChangeCollorVC: UIViewController {
         }
     }
     
+    @IBAction func hexTF(_ sender: UITextField) {
+       
+    }
     
     
     @IBAction func opacitySlider(_ sender: UISlider) {
