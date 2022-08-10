@@ -102,6 +102,10 @@ class ChangeCollorVC: UIViewController, CollorUpdate {
    
     @IBAction func doneButton() {
         delegate?.onCollorUpdate(collor: changeBgrLbl.textColor)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let _ = storyboard.instantiateViewController(withIdentifier:
+        "FirstScreenVC") as! FirstScreenVC
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     

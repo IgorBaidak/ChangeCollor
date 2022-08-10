@@ -37,6 +37,7 @@ Background</string>
                     </view>
                     <navigationItem key="navigationItem" id="dts-Z5-f0W"/>
                     <connections>
+                        <outlet property="changeBackgroundButton" destination="lkJ-Cq-CwB" id="GrE-4h-a1W"/>
                         <outlet property="superView" destination="8bC-Xf-vdC" id="yTy-wu-V45"/>
                     </connections>
                 </viewController>
