@@ -7,17 +7,41 @@
 
 import UIKit
 
-protocol CollorUpdateProtocol {
-    func onCollorUpdate(color: UIColor)
+
+protocol CollorUpdate {
+    func onCollorUpdate (collor: UIColor)
 }
 
-class FirstScreenVC: UIViewController {
 
-    @IBOutlet var superView: UIView!
+class FirstScreenVC: UIViewController, CollorUpdate {
+    func onCollorUpdate(collor: UIColor) {
+        superView.backgroundColor = collor
+    }
+    
+    
+    
+    @IBOutlet var superView: UIView! { didSet {superView.backgroundColor = .clear }}
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+    }
+    
+    
+    @IBAction func changeBackgroundAction(_ sender: UIButton) {
+        // получаем вью контроллер
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let changeCollorScreen = storyboard.instantiateViewController(withIdentifier:
+        "ChangeCollorVC") as! ChangeCollorVC
+        
+        // передаем данные
+        changeCollorScreen.collorLabelText = superView.backgroundColor
+        
+        // устанавливаем текущий класс в качестве делегата
+        changeCollorScreen.delegate = self
+        
+        // делаем переход на следующий экран
+        self.navigationController?.pushViewController(changeCollorScreen, animated: true)
     }
     
    

@@ -7,9 +7,18 @@
 
 import UIKit
 
-class ChangeCollorVC: UIViewController {
-
-    @IBOutlet weak var changeBgrLbl: UILabel!
+class ChangeCollorVC: UIViewController, CollorUpdate {
+    func onCollorUpdate(collor: UIColor) {
+        changeBgrLbl.textColor = collor
+    }
+    
+    var delegate: CollorUpdate?
+    var collorLabelText: UIColor?
+    
+    
+    @IBOutlet weak var changeBgrLbl: UILabel! {
+        didSet { changeBgrLbl.textColor = collorLabelText}
+    }
     
     @IBOutlet weak var redSlider: UISlider!
     @IBOutlet weak var redTextField: UITextField!
@@ -78,7 +87,7 @@ class ChangeCollorVC: UIViewController {
     
     
     @IBAction func opacitySlider(_ sender: UISlider) {
-        opacityTextField.text = String(sender.value)
+        opacityTextField.text = String(NSString(format: "%.0f", opacitySlider.value * 100))
         changeCollorLabel()
     }
     
@@ -89,6 +98,13 @@ class ChangeCollorVC: UIViewController {
             changeCollorLabel()
         }
     }
+    
+   
+    @IBAction func doneButton() {
+        delegate?.onCollorUpdate(collor: changeBgrLbl.textColor)
+    }
+    
+    
     
     /*
     // MARK: - Navigation

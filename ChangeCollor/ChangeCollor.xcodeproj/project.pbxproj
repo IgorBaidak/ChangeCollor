@@ -15,8 +15,6 @@
 		33E5F02C28A2BAD700E689C1 /* FirstScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E5F02B28A2BAD700E689C1 /* FirstScreenVC.swift */; };
 		33E5F02E28A2BAFA00E689C1 /* ChangeCollorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E5F02D28A2BAFA00E689C1 /* ChangeCollorVC.swift */; };
 		33E5F03428A2EDD300E689C1 /* UserDefaultCollor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E5F03328A2EDD300E689C1 /* UserDefaultCollor.swift */; };
-		33E5F03628A2EE6300E689C1 /* UserModelCollor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E5F03528A2EE6300E689C1 /* UserModelCollor.swift */; };
-		33E5F03B28A2EF0900E689C1 /* UserDefaultsCollorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E5F03A28A2EF0900E689C1 /* UserDefaultsCollorService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +28,6 @@
 		33E5F02B28A2BAD700E689C1 /* FirstScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenVC.swift; sourceTree = "<group>"; };
 		33E5F02D28A2BAFA00E689C1 /* ChangeCollorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeCollorVC.swift; sourceTree = "<group>"; };
 		33E5F03328A2EDD300E689C1 /* UserDefaultCollor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultCollor.swift; sourceTree = "<group>"; };
-		33E5F03528A2EE6300E689C1 /* UserModelCollor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModelCollor.swift; sourceTree = "<group>"; };
-		33E5F03A28A2EF0900E689C1 /* UserDefaultsCollorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsCollorService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +62,6 @@
 			children = (
 				33E5F01728A2B8B100E689C1 /* AppDelegate.swift */,
 				33E5F01928A2B8B100E689C1 /* SceneDelegate.swift */,
-				33E5F03728A2EE9E00E689C1 /* Service */,
-				33E5F03228A2EDA100E689C1 /* Model */,
 				33E5F03128A2ED9500E689C1 /* Extension */,
 				33E5F02F28A2BB0200E689C1 /* Controllers */,
 				33E5F03028A2ED8D00E689C1 /* Views */,
@@ -101,22 +95,6 @@
 				33E5F03328A2EDD300E689C1 /* UserDefaultCollor.swift */,
 			);
 			path = Extension;
-			sourceTree = "<group>";
-		};
-		33E5F03228A2EDA100E689C1 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				33E5F03528A2EE6300E689C1 /* UserModelCollor.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		33E5F03728A2EE9E00E689C1 /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				33E5F03A28A2EF0900E689C1 /* UserDefaultsCollorService.swift */,
-			);
-			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,11 +169,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				33E5F01828A2B8B100E689C1 /* AppDelegate.swift in Sources */,
-				33E5F03628A2EE6300E689C1 /* UserModelCollor.swift in Sources */,
 				33E5F02E28A2BAFA00E689C1 /* ChangeCollorVC.swift in Sources */,
 				33E5F03428A2EDD300E689C1 /* UserDefaultCollor.swift in Sources */,
 				33E5F01A28A2B8B100E689C1 /* SceneDelegate.swift in Sources */,
-				33E5F03B28A2EF0900E689C1 /* UserDefaultsCollorService.swift in Sources */,
 				33E5F02C28A2BAD700E689C1 /* FirstScreenVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

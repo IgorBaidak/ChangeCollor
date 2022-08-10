@@ -11,7 +11,7 @@
         <!--First ScreenVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="FirstScreenVC" customModule="ChangeCollor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstScreenVC" id="BYZ-38-t0r" customClass="FirstScreenVC" customModule="ChangeCollor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,7 +24,7 @@
 Background</string>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="ldy-g5-Ea7" kind="show" id="FGf-mQ-4yQ"/>
+                                    <action selector="changeBackgroundAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O7b-Ou-BQ8"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -47,13 +47,13 @@ Background</string>
         <!--Change CollorVC-->
         <scene sceneID="y3l-dD-CpT">
             <objects>
-                <viewController id="ldy-g5-Ea7" customClass="ChangeCollorVC" customModule="ChangeCollor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChangeCollorVC" id="ldy-g5-Ea7" customClass="ChangeCollorVC" customModule="ChangeCollor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ja0-32-Lpm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rEY-sM-u4Y">
-                                <rect key="frame" x="25" y="245" width="364" height="464"/>
+                                <rect key="frame" x="25" y="201" width="364" height="508"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="O4x-If-GuW">
                                         <rect key="frame" x="10" y="8" width="354" height="61.5"/>
@@ -190,7 +190,6 @@ Background</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
-                                                    <action selector="hexTF:" destination="xuM-4H-aGH" eventType="editingChanged" id="96f-pJ-5ie"/>
                                                     <action selector="hexTF:" destination="ldy-g5-Ea7" eventType="editingChanged" id="Ex0-qf-Mb3"/>
                                                 </connections>
                                             </textField>
@@ -259,9 +258,12 @@ Background</string>
                                 <buttonConfiguration key="configuration" style="filled" title="Done">
                                     <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="doneButton" destination="ldy-g5-Ea7" eventType="touchUpInside" id="NJg-YK-pWN"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Background" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ldh-79-Jey">
-                                <rect key="frame" x="75.5" y="153" width="263.5" height="36"/>
+                                <rect key="frame" x="75.5" y="109" width="263.5" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -296,7 +298,6 @@ Background</string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NKp-Co-9h5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="xuM-4H-aGH" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1237.68115942029" y="70.982142857142847"/>
         </scene>
