@@ -82,7 +82,17 @@ class ChangeCollorVC: UIViewController, CollorUpdate {
     }
     
     @IBAction func hexTF(_ sender: UITextField) {
-       
+        if let hexText = sender.text,
+           !hexText.isEmpty {
+            redTextField.isEnabled = false
+            greenTextField.isEnabled = false
+            blueTextField.isEnabled = false
+        } else {
+            redTextField.isEnabled = true
+            greenTextField.isEnabled = true
+            blueTextField.isEnabled = true
+            
+        }
     }
     
     
